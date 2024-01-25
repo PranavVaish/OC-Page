@@ -1,4 +1,4 @@
-/* Import Google font - Poppins */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 * {
   margin: 0;
@@ -12,12 +12,68 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(to left top, #031A9A, #8B53FF);
+  background: linear-gradient(to left top, #1a32e1, #f23c27);
 }
 .wrapper {
   max-width: 1100px;
   width: 100%;
   position: relative;
+}
+.background {
+  position: absolute; /* Position the background image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it stays behind other content */
+
+  background-image: url("images/th.jpeg"); /* Replace with your image path */
+  background-size: cover; /* Make the image cover the entire container */
+
+  filter: blur(5px); /* Apply the blur effect */
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  background-image: url("images/WhatsApp\ Image\ 2024-01-25\ at\ 13.29.10_0bd2c35c.jpg");
+  background-size: cover;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/marvels-spider-man-3840x2160-13498.jpeg");
+  background-size: cover;
+  opacity: 0.5; /* Adjust opacity for desired transparency */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Place content on top of the overlay */
+}
+
+
+.heading {
+  
+    position: fixed; /* Use fixed positioning for anchoring to the viewport */
+    top: 0; /* Move it to the top of the viewport */
+    left: 50%; /* Move it halfway to the right */
+    transform: translate(-50%, 0); /* Center it horizontally without vertical offset */
+    text-align: center; /* Maintain center alignment */
+    color: #ffffff; /* Adjust text color for contrast */
+   /* font-size: 3rem; /* Adjust font size as needed */
+    font-size: 60px;
+    font-weight: bold;
+  
 }
 .wrapper i {
   top: 50%;
@@ -28,7 +84,7 @@ body {
   position: absolute;
   text-align: center;
   line-height: 50px;
-  background: #fff;
+  background: #ffffff;
   border-radius: 50%;
   box-shadow: 0 3px 6px rgba(0,0,0,0.23);
   transform: translateY(-50%);
@@ -77,14 +133,14 @@ body {
   scroll-snap-align: start;
   height: 342px;
   list-style: none;
-  background: #fff;
+  background: #f7d281;
   cursor: pointer;
   padding-bottom: 15px;
   flex-direction: column;
   border-radius: 8px;
 }
 .carousel .card .img {
-  background: #8B53FF;
+  background: #de0a0a;
   height: 148px;
   width: 148px;
   border-radius: 50%;
@@ -102,7 +158,7 @@ body {
   margin: 30px 0 5px;
 }
 .carousel .card span {
-  color: #6A6D78;
+  color: #0d5c83;
   font-size: 1.31rem;
 }
 
@@ -114,6 +170,6 @@ body {
 
 @media screen and (max-width: 600px) {
   .wrapper .carousel {
-    grid-auto-columns: 100%; 
+    grid-auto-columns: 100%;
   }
 }
